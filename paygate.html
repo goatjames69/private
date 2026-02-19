@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay with PayGate</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: system-ui, -apple-system, sans-serif; max-width: 420px; margin: 40px auto; padding: 20px; background: #f5f5f5; }
+        h1 { font-size: 1.35rem; margin-bottom: 8px; }
+        p { color: #555; font-size: 0.9rem; margin-bottom: 20px; }
+        label { display: block; font-weight: 600; margin-bottom: 6px; }
+        input { width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; margin-bottom: 16px; }
+        button { width: 100%; padding: 12px; background: #2563eb; color: #fff; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; }
+        button:hover { background: #1d4ed8; }
+        .note { font-size: 0.85rem; color: #666; margin-top: 12px; }
+        .error { color: #b91c1c; font-size: 0.9rem; margin-bottom: 12px; }
+    </style>
+</head>
+<body>
+    <h1>Pay with PayGate</h1>
+    <p>Enter your email and amount. Payment will be sent to our default address (USDC Polygon).</p>
+
+    <form id="pay-form" action="api/paygate_guest.php" method="post">
+        <label for="email">Your email</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com">
+
+        <label for="amount">Amount (USD)</label>
+        <input type="number" id="amount" name="amount" min="1" step="0.01" value="10" required>
+
+        <div id="err" class="error" style="display: none;"></div>
+        <button type="submit">Proceed</button>
+    </form>
+
+    <p class="note">You will be redirected to PayGate checkout to complete the payment. No login required.</p>
+
+    <script>
+        document.getElementById('pay-form').addEventListener('submit', function(e) {
+            var email = document.getElementById('email').value.trim();
+            var amount = parseFloat(document.getElementById('amount').value);
+            if (!email) {
+                e.preventDefault();
+                document.getElementById('err').textContent = 'Please enter your email.';
+                document.getElementById('err').style.display = 'block';
+                return false;
+            }
+            if (isNaN(amount) || amount < 1) {
+                e.preventDefault();
+                document.getElementById('err').textContent = 'Amount must be at least $1.';
+                document.getElementById('err').style.display = 'block';
+                return false;
+            }
+        });
+    </script>
+</body>
+</html>

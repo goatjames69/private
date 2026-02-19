@@ -1,0 +1,73 @@
+You are a senior full-stack software engineer. Build a complete web application named "JAMES GAMEROOM" from scratch according to the following specification. Use PHP for the backend and vanilla HTML/CSS/JavaScript for the frontend. Do not use a database: persist all data in JSON files stored in a folder named "json". Use PHP sessions for authentication.
+
+=== ROLES AND AUTH ===
+- Three roles: end user, staff, admin.
+- Admin: single superuser (credentials in config, e.g. admin username/password). Full access.
+- Staff: multiple accounts stored in json/staff.json; each has permissions object: payments, withdrawals, game_accounts, payment_methods. Staff see only what their permissions allow.
+- Users: register (auth/register.php), login (auth/login.php). Session stores user_id, username; admin/staff sessions stored separately (admin login at admin/login.php).
+- Implement requireLogin(), requireStaffOrAdmin(), requireAdmin(), canAccess(area), getCurrentUser(), getCurrentStaff() in a central config.php that all pages include.
+
+=== CORE CONFIG (config.php) ===
+- Define BASE_PATH from SCRIPT_NAME so the app works in a subfolder (e.g. /htdocs).
+- Define constants for every JSON file path: USERS_FILE, PAYMENTS_FILE, WITHDRAWAL_REQUESTS_FILE, GAME_REQUESTS_FILE, GAME_WITHDRAWALS_FILE, GAME_ACCOUNT_REQUESTS_FILE, PASSWORD_RESET_REQUESTS_FILE, PAYMENT_METHODS_FILE, STAFF_FILE, GAMES_CONFIG_FILE, SPIN_LOGS_FILE, GAME_SETTINGS_FILE, SUPPORT_CHATS_FILE, SUPPORT_UPLOADS_DIR, REALTIME_QUEUE_FILE, REALTIME_EVENT_LOG_FILE, MINES_GAMES_FILE, MINES_ACTIVE_FILE, PICKPATH_GAMES_FILE, PAYGATETX_FILE.
+- Helpers: readJSON($file), writeJSON($file, $data). On writeJSON, create a timestamped backup copy of the existing file before overwriting.
+- generateId() returning a unique string (e.g. uniqid).
+
+=== USER PAGES ===
+1) index.php – Landing. If logged in redirect to dashboard. Else show welcome text and links to Login and Register.
+2) auth/login.php – Username + password form. On success set session and redirect to dashboard (or to profile if user has no email). auth/logout.php – Destroy session, redirect to index.
+3) auth/register.php – Form: full name, username, email, password, phone. Optional field: "Referral Code". Validate unique username and email. On success add user to users.json with: id, full_name, username, email, password_hash (password_hash), phone, balance=0, game_accounts=[], deposit_history=[], game_deposit_requests=[], referral_code (unique 8-char uppercase), referred_by (referrer user id if referral code valid), referral_bonus_paid=false. Generate referral_code via a helper that ensures uniqueness.
+4) dashboard.php – Require login. If user has no email redirect to profile?add_email=1. Show: welcome header, balance card (balance from user), Deposit and Withdraw buttons, spin wheel section (see below), games grid (see below), weekly leaderboard widget (top 3 by score), withdraw modal (form: amount, method chime/paypal, account_info, optional QR upload). Withdraw submitted via POST to api/withdraw.php (AJAX). Use same bottom nav on all user pages: Home, Deposit, Games, Leaderboard, Profile, Support.
+5) deposit.php – Require login. Load payment methods from payment_methods.json (paypal, chime, paygate). Form: amount, method. If method paygate show link to cards_deposit.html; else show payment_info textarea and submit to self: append to payments.json (id, user_id, amount, method, status=pending, date, payment_info). Also show a "Card / PayGate Logs" table: rows from paygatetx.json filtered by current user email; columns Date, Status, Amount, Action (open link), Tracking (truncate with title for full). Style table simply; no separate cards per row.
+6) profile.php – Require login. Sections: Profile photo upload (max 2MB, jpeg/png/gif/webp), save to uploads/profile_photos/{user_id}.{ext}, set user.profile_photo path; Email (required) update form; Refer a Friend: show user referral code, copy button, text that referrer gets 50% of referred user's first deposit; Account info table (name, username, email, phone, balance); Game accounts table; Activity & Logs: merged list of deposits, withdrawals, game deposits/withdrawals, and referral_bonus_history (type "Referral Bonus", detail amount + "from referral" or username), sorted by date. Ensure every user has a referral_code (generate and save if missing when loading profile).
+7) leaderboard.php – Require login. Weekly leaderboard = last 7 days. Score = weekly_deposit_total + (referral_count * 50). Weekly deposit = sum of approved payments in last 7 days for user + sum of approved paygatetx in last 7 days (match user by email). Referral count = count of users where referred_by = this user id. Show top 100. Tabs: By Score, By Deposit, By Referrals (same list sorted differently). Table: Rank, Photo (profile_photo or placeholder), Username, Score, Weekly Deposit, Referrals. Use getProfilePhotoUrl(user) helper that returns URL or empty.
+8) games.php – Require login. Load games from games.json. Split into "Our Games" (our_game true: Mines, Pick-a-Path) and "Provider Games". Display as cards linking to /games/play.php?g=slug or directly to mines/pickpath. Show game logo from gameslogo/ or config.
+9) support.php – Require login. List user's support chats; create ticket form (reason dropdown, message, optional image upload). Open chat: show messages, send box. Poll api/support_messages.php every 2.5s for updates. Inline support-chat CSS and JS into the page to avoid 403 on strict hosts. Use relative or BASE_PATH for API URLs.
+
+=== GAMES LOGIC ===
+- games/play.php – Require login. GET g=slug. If slug mines redirect to games/mines.php; if pickapath to games/pickpath.php. Else get game by slug from games.json; if not found redirect dashboard. Set gameName, include games/_game_page.php.
+- games/_game_page.php – Shared for all provider games. Require login and user email. Get user's game_account for this game name. If no account: show "Request account" form (POST request_account → game_account_requests.json). If account: show Deposit form (amount from main balance → game_requests.json), Withdraw form (amount from game to main, subject to rollover), Show username/password, Reset password request. Rollover: from game_settings.json (game_rollover_multiplier, min_game_withdrawal). Compute max_withdrawable from user's game_deposit_log and game_withdrawals for this game (rollover = (total base + bonus) * multiplier; max = rollover - total withdrawn). Admin approves game deposits and game withdrawals in admin/games.php (and credits/deducts balance, updates game_deposit_log, etc.).
+- games/mines.php and games/pickpath.php – In-house games. Each has own PHP page and api/mines.php, api/pickpath.php for game state (mines_games, mines_active, pickpath_games). Implement Mines (grid, reveal, cashout) and Pick-a-Path (stages, multipliers, cashout) with server-side validation and balance updates.
+- Game catalog: json/games.json array of { name, slug, logo, link, our_game }. Admin can edit in admin/game_catalog.php. Game settings (min/max main withdrawal, rollover, deposit bonus %, bet limits) in admin/game_settings.php → game_settings.json.
+
+=== PAYMENTS AND PAYGATE ===
+- Deposits: User submits on deposit.php → payments.json (pending). Admin approves in admin/payments.php: set status approved, add amount to user balance, append to user deposit_history. If user has referred_by and referral_bonus_paid is false: set referral_bonus_paid true, add 50% of amount to referrer balance, append to referrer referral_bonus_history (amount, date, referred_username, source=deposit).
+- PayGate: Standalone page cards_deposit.html (no PHP in page): form email, amount, payment method; JS calls PayGate API to get payment link, then POST JSON { email, amount, tracking_id, link } to save.php. save.php appends to paygatetx.json with server_time, id (pg_uniqid), status=pending. Admin can approve in dashboard (PayGate section) or via api/paygate_tx_status.php: POST id, action=approve|reject. On approve: set tx status approved, find user by email, add amount to user balance; same referral 50% and referral_bonus_history (source=paygate). On reject only update status.
+- Withdrawals: api/withdraw.php POST amount, method, account_info, optional qr_code file. Validate min/max from game_settings (min_main_withdrawal, max_main_withdrawal), balance. Append to withdrawal_requests.json. Admin approves in admin/payments.php (deduct balance, set status approved).
+
+=== SPIN WHEEL ===
+- Dashboard shows spin wheel: 1 free spin per day OR pay $5 to spin (if balance >= 5). api/spin.php POST: if paid=1&cost=5 deduct 5 from balance; else check canUserSpinToday (last_spin_date != today). Return reward_index (weighted random). Rewards config: free wheel and $5 wheel with different prize arrays and weights. Update user balance, spin_logs.json, last_spin_date, spin_streak (consecutive days for free spin). Frontend spin-wheel.js calls api/spin.php and animates wheel to segment.
+
+=== SUPPORT ===
+- support_chats.json: array of { id, user_id, reason, status, messages: [{ id, from, sender_id, text, image, date }], created_at, updated_at }. createSupportChat, addSupportMessage in config. User creates ticket via api/support_create.php (reason, message, image upload to uploads/support). api/support_messages.php returns messages for chat id. api/support_send.php sends message (user or staff). Admin support page lists all chats, staff can reply. Mark seen by user/staff. Use getSupportChatById, getSupportChatsByUserId, etc.
+
+=== REALTIME (OPTIONAL) ===
+- realtime_queue.json or realtime_event_log.json: PHP appends events (user_balance_updated, support_message, notification). Optional Node.js WebSocket server (realtime-server/server.js) reads queue and broadcasts. Frontend realtime.js: try WebSocket, else poll api/realtime_poll.php?last_id=... every few seconds. api/realtime_poll.php returns events for current user/admin since last_id. Use for live balance update and support message notifications.
+
+=== ADMIN PANEL ===
+- admin/_header.php: sidebar with Dashboard, Users, Activity, Support, Payments, Game Accounts, Payment Methods, Game Catalog (admin only), Game Settings (admin only), Staff (admin only). Show pending counts on sidebar. Include style.css, admin.css, realtime.css.
+- admin/dashboard.php: stats (total users, pending deposits/withdrawals/game requests), financial overview (approved deposits/withdrawals, net), quick action links, recent activity (approved deposits, payment requests, withdrawals, game deposits, account requests, PayGate/Card deposits with Approve/Reject buttons). PayGate approve/reject: fetch POST to api/paygate_tx_status.php with id and action; reload on success.
+- admin/users.php: table of users (username, balance, etc.), link to edit; AJAX update balance via api/admin_update_user.php.
+- admin/payments.php: tabs Deposits, Withdrawals, Game Withdrawals. Approve/reject each; on deposit approve apply referral bonus as above.
+- admin/games.php: game account requests, game deposit requests, game withdrawal requests; approve/reject with balance and rollover logic.
+- admin/payment_methods.php: form for PayPal, Chime, PayGate (enabled, name, instructions, wallet, etc.) → payment_methods.json.
+- admin/activity.php: spin logs and activity.
+- admin/support.php: list support chats, open and reply.
+- admin/staff.php: CRUD staff accounts and permissions.
+
+=== LEADERBOARD AND REFERRAL ===
+- When a referred user's first deposit is approved (either payments or PayGate), credit referrer 50% and set referred user referral_bonus_paid = true. Log in referrer referral_bonus_history (amount, date, referred_username or referred_email, source).
+- Weekly leaderboard: score = weekly_deposit + referrals*50. Top 100; show on leaderboard.php with tabs By Score / By Deposit / By Referrals. Dashboard shows top 3 only. Profile photos from user.profile_photo displayed in leaderboard.
+
+=== ASSETS AND STYLING ===
+- assets/css/style.css: CSS variables (--bg-primary, --bg-card, --text-primary, --success, --warning, etc.), forms, buttons, cards.
+- assets/css/user-dashboard.css: dashboard layout, balance card, spin card, games grid, nav, tables, modals, leaderboard widget, paygate logs table.
+- assets/css/admin.css: sidebar, admin panels.
+- assets/js/main.js: generic helpers. toasts.js: success, error, confirm toasts.
+- All user-facing pages use same bottom nav and consistent dark theme.
+
+=== FILES TO CREATE (MINIMUM) ===
+config.php, index.php, auth/login.php, auth/register.php, auth/logout.php, dashboard.php, deposit.php, profile.php, leaderboard.php, games.php, support.php, save.php, cards_deposit.html, admin/_header.php, admin/_footer.php, admin/login.php, admin/logout.php, admin/dashboard.php, admin/users.php, admin/payments.php, admin/games.php, admin/game_catalog.php, admin/game_settings.php, admin/payment_methods.php, admin/activity.php, admin/support.php, admin/staff.php, api/withdraw.php, api/spin.php, api/me.php, api/paygate_tx_status.php, api/support_create.php, api/support_messages.php, api/support_send.php, api/admin_update_user.php, api/realtime_poll.php, games/play.php, games/_game_page.php, games/mines.php, games/pickpath.php, api/mines.php, api/pickpath.php, and one PHP per provider game (or dynamic include). Create json/*.json initially as [] or default content. Create uploads/profile_photos, uploads/support, uploads/user_qr_codes. Implement getWeeklyDepositTotal (payments + paygatetx by email in last 7 days), getReferralCount, getWeeklyLeaderboardData, getWeeklyLeaderboard(limit). Ensure profile photo upload validates type and size and stores path in user.
+
+=== PROMPT END ===
+Build the application so that it matches the behavior and structure described. Prefer clarity and consistency with the existing report (PROJECT_STRUCTURE_REPORT.md). Use PHP 7+ and modern JavaScript; no frameworks required.
