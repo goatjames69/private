@@ -1,0 +1,251 @@
+[
+    {
+        "id": "sup_697b9f02c885b7.64961437",
+        "user_id": "697b8b2aae9612.56728974",
+        "reason": "Spin\/Bonus",
+        "status": "closed",
+        "created_at": "2026-01-29 18:55:14",
+        "updated_at": "2026-01-29 19:02:43",
+        "messages": [
+            {
+                "id": "msg_697b9f02c88632.01298899",
+                "from": "user",
+                "sender_id": "697b8b2aae9612.56728974",
+                "text": "issues",
+                "image": null,
+                "date": "2026-01-29 18:55:14"
+            },
+            {
+                "id": "msg_697b9f0e778f76.60972138",
+                "from": "user",
+                "sender_id": "697b8b2aae9612.56728974",
+                "text": "hi sir",
+                "image": null,
+                "date": "2026-01-29 18:55:26"
+            },
+            {
+                "id": "msg_697b9f64d961f5.13244475",
+                "from": "user",
+                "sender_id": "697b8b2aae9612.56728974",
+                "text": "",
+                "image": "uploads\/support\/msg_697b8b2aae9612.56728974_1769709412.PNG",
+                "date": "2026-01-29 18:56:52"
+            },
+            {
+                "id": "msg_697ba032a3db26.71265820",
+                "from": "user",
+                "sender_id": "697b8b2aae9612.56728974",
+                "sender_name": "User: Amsal noob",
+                "text": "xd",
+                "image": null,
+                "date": "2026-01-29 19:00:18"
+            },
+            {
+                "id": "msg_697ba03dce53c3.88689925",
+                "from": "user",
+                "sender_id": "697b8b2aae9612.56728974",
+                "sender_name": "User: Amsal noob",
+                "text": "yes sir",
+                "image": null,
+                "date": "2026-01-29 19:00:29"
+            }
+        ],
+        "last_seen_by_staff_at": "2026-01-29 19:02:43",
+        "last_seen_by_user_at": "2026-01-29 19:00:15"
+    },
+    {
+        "id": "sup_697ba13f62ee45.91608848",
+        "user_id": "697b8b2aae9612.56728974",
+        "reason": "Deposit issue",
+        "status": "open",
+        "created_at": "2026-01-29 19:04:47",
+        "updated_at": "2026-01-31 22:34:47",
+        "last_seen_by_user_at": "2026-01-29 19:10:52",
+        "last_seen_by_staff_at": "2026-01-31 22:35:32",
+        "messages": [
+            {
+                "id": "msg_697ba13f62eed8.48745209",
+                "from": "user",
+                "sender_id": "697b8b2aae9612.56728974",
+                "sender_name": "User: Amsal noob",
+                "text": "xd",
+                "image": "uploads\/support\/sup_697b8b2aae9612.56728974_1769709887.PNG",
+                "date": "2026-01-29 19:04:47"
+            },
+            {
+                "id": "msg_697ba1486765c2.62601204",
+                "from": "user",
+                "sender_id": "697b8b2aae9612.56728974",
+                "sender_name": "User: Amsal noob",
+                "text": "yes sir",
+                "image": null,
+                "date": "2026-01-29 19:04:56"
+            },
+            {
+                "id": "msg_697ba1c1d99288.10893311",
+                "from": "user",
+                "sender_id": "697b8b2aae9612.56728974",
+                "sender_name": "User: Amsal noob",
+                "text": "kk\\",
+                "image": null,
+                "date": "2026-01-29 19:06:57"
+            },
+            {
+                "id": "msg_697ba249a2de10.21478643",
+                "from": "admin",
+                "sender_id": "admin",
+                "sender_name": "Admin",
+                "text": "xd",
+                "image": null,
+                "date": "2026-01-29 19:09:13"
+            },
+            {
+                "id": "msg_697ba250e6e646.73265208",
+                "from": "admin",
+                "sender_id": "admin",
+                "sender_name": "Admin",
+                "text": "ok now its fixed",
+                "image": null,
+                "date": "2026-01-29 19:09:20"
+            },
+            {
+                "id": "msg_697ba2b3514cb9.00648287",
+                "from": "admin",
+                "sender_id": "admin",
+                "sender_name": "Admin",
+                "text": "this is admin",
+                "image": null,
+                "date": "2026-01-29 19:10:59"
+            },
+            {
+                "id": "msg_697ba2bd4bb142.72698688",
+                "from": "user",
+                "sender_id": "697b8b2aae9612.56728974",
+                "sender_name": "User: Amsal noob",
+                "text": "this is user",
+                "image": null,
+                "date": "2026-01-29 19:11:09"
+            },
+            {
+                "id": "msg_697ba2c3e9b9d5.37217258",
+                "from": "admin",
+                "sender_id": "admin",
+                "sender_name": "Admin",
+                "text": "this is admin",
+                "image": null,
+                "date": "2026-01-29 19:11:15"
+            },
+            {
+                "id": "msg_697ba9a9e33e05.13544378",
+                "from": "admin",
+                "sender_id": "admin",
+                "sender_name": "Admin",
+                "text": "xd",
+                "image": null,
+                "date": "2026-01-29 19:40:41"
+            },
+            {
+                "id": "msg_697bb88c8bd497.22464532",
+                "from": "admin",
+                "sender_id": "admin",
+                "sender_name": "Admin",
+                "text": "hugugih",
+                "image": null,
+                "date": "2026-01-29 20:44:12"
+            },
+            {
+                "id": "msg_697bb891b86be5.26214351",
+                "from": "admin",
+                "sender_id": "admin",
+                "sender_name": "Admin",
+                "text": "",
+                "image": "uploads\/support\/msg_admin_1769715857.PNG",
+                "date": "2026-01-29 20:44:17"
+            },
+            {
+                "id": "msg_697e6045216ea1.14894801",
+                "from": "admin",
+                "sender_id": "admin",
+                "sender_name": "Admin",
+                "text": "lol",
+                "image": null,
+                "date": "2026-01-31 21:04:21"
+            },
+            {
+                "id": "msg_697e73a29fdde4.78861554",
+                "from": "admin",
+                "sender_id": "admin",
+                "sender_name": "Admin",
+                "text": "xd",
+                "image": null,
+                "date": "2026-01-31 22:26:58"
+            },
+            {
+                "id": "msg_697e75775f2987.19466630",
+                "from": "admin",
+                "sender_id": "admin",
+                "sender_name": "Admin",
+                "text": "l",
+                "image": null,
+                "date": "2026-01-31 22:34:47"
+            }
+        ]
+    },
+    {
+        "id": "sup_697ba95070fa09.72739198",
+        "user_id": "697ba3c3867c24.89191547",
+        "reason": "Withdrawal issue",
+        "status": "closed",
+        "created_at": "2026-01-29 19:39:12",
+        "updated_at": "2026-01-29 19:40:18",
+        "last_seen_by_user_at": "2026-01-29 19:40:28",
+        "last_seen_by_staff_at": "2026-01-29 19:39:18",
+        "messages": [
+            {
+                "id": "msg_697ba95070fa72.46251962",
+                "from": "user",
+                "sender_id": "697ba3c3867c24.89191547",
+                "sender_name": "User: Daku",
+                "text": "paisa de mera",
+                "image": null,
+                "date": "2026-01-29 19:39:12"
+            },
+            {
+                "id": "msg_697ba959172fc8.15548896",
+                "from": "admin",
+                "sender_id": "admin",
+                "sender_name": "Admin",
+                "text": "gand mara",
+                "image": null,
+                "date": "2026-01-29 19:39:21"
+            },
+            {
+                "id": "msg_697ba969b92f70.58632868",
+                "from": "user",
+                "sender_id": "697ba3c3867c24.89191547",
+                "sender_name": "User: Daku",
+                "text": "ruk police main call karta hu",
+                "image": null,
+                "date": "2026-01-29 19:39:37"
+            },
+            {
+                "id": "msg_697ba96ee43773.21515139",
+                "from": "admin",
+                "sender_id": "admin",
+                "sender_name": "Admin",
+                "text": "scam ho gaya tere sath",
+                "image": null,
+                "date": "2026-01-29 19:39:42"
+            },
+            {
+                "id": "msg_697ba982505223.83625043",
+                "from": "user",
+                "sender_id": "697ba3c3867c24.89191547",
+                "sender_name": "User: Daku",
+                "text": "",
+                "image": "uploads\/support\/msg_697ba3c3867c24.89191547_1769712002.jpg",
+                "date": "2026-01-29 19:40:02"
+            }
+        ]
+    }
+]

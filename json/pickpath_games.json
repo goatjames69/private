@@ -1,0 +1,149 @@
+[
+    {
+        "game_id": "697f42a4277347.87671714",
+        "user_id": "691e45379c1cd3.08514573",
+        "bet": 1,
+        "result": "loss",
+        "profit": -1,
+        "step": 1,
+        "created_at": "2026-02-01 13:10:13"
+    },
+    {
+        "game_id": "697f429b5a8058.15941169",
+        "user_id": "691e45379c1cd3.08514573",
+        "bet": 1,
+        "result": "win",
+        "profit": 1,
+        "payout": 2,
+        "multiplier": 2,
+        "step": 3,
+        "created_at": "2026-02-01 13:10:11"
+    },
+    {
+        "game_id": "697e6bcce975d5.35447690",
+        "user_id": "691e45379c1cd3.08514573",
+        "bet": 8,
+        "result": "loss",
+        "profit": -8,
+        "step": 2,
+        "created_at": "2026-01-31 21:53:34"
+    },
+    {
+        "game_id": "697e6bcb0a2a78.44083110",
+        "user_id": "691e45379c1cd3.08514573",
+        "bet": 8,
+        "result": "loss",
+        "profit": -8,
+        "step": 0,
+        "created_at": "2026-01-31 21:53:31"
+    },
+    {
+        "game_id": "697e6bc704d5e0.07099027",
+        "user_id": "691e45379c1cd3.08514573",
+        "bet": 8,
+        "result": "loss",
+        "profit": -8,
+        "step": 1,
+        "created_at": "2026-01-31 21:53:29"
+    },
+    {
+        "game_id": "697e6bbe324323.71910889",
+        "user_id": "691e45379c1cd3.08514573",
+        "bet": 1,
+        "result": "win",
+        "profit": 1,
+        "payout": 2,
+        "multiplier": 2,
+        "step": 3,
+        "created_at": "2026-01-31 21:53:23"
+    },
+    {
+        "game_id": "697e6bb904c856.53893579",
+        "user_id": "691e45379c1cd3.08514573",
+        "bet": 1,
+        "result": "win",
+        "profit": 1,
+        "payout": 2,
+        "multiplier": 2,
+        "step": 3,
+        "created_at": "2026-01-31 21:53:16"
+    },
+    {
+        "game_id": "697e6bb1c86910.53739087",
+        "user_id": "691e45379c1cd3.08514573",
+        "bet": 1,
+        "result": "win",
+        "profit": 1,
+        "payout": 2,
+        "multiplier": 2,
+        "step": 3,
+        "created_at": "2026-01-31 21:53:12"
+    },
+    {
+        "game_id": "697e6bb004d4d6.29255604",
+        "user_id": "691e45379c1cd3.08514573",
+        "bet": 1,
+        "result": "loss",
+        "profit": -1,
+        "step": 0,
+        "created_at": "2026-01-31 21:53:04"
+    },
+    {
+        "game_id": "697e6badebf006.67048190",
+        "user_id": "691e45379c1cd3.08514573",
+        "bet": 1,
+        "result": "loss",
+        "profit": -1,
+        "step": 0,
+        "created_at": "2026-01-31 21:53:02"
+    },
+    {
+        "game_id": "697e6b74dce476.52817506",
+        "user_id": "691e45379c1cd3.08514573",
+        "bet": 1,
+        "result": "loss",
+        "profit": -1,
+        "step": 0,
+        "created_at": "2026-01-31 21:52:05"
+    },
+    {
+        "game_id": "697e6ad854ec43.57254115",
+        "user_id": "691e45379c1cd3.08514573",
+        "bet": 1,
+        "result": "win",
+        "profit": 2.2,
+        "payout": 3.2,
+        "multiplier": 3.2,
+        "step": 3,
+        "created_at": "2026-01-31 21:49:32"
+    },
+    {
+        "game_id": "697e6ad668ba26.93521088",
+        "user_id": "691e45379c1cd3.08514573",
+        "bet": 1,
+        "result": "loss",
+        "profit": -1,
+        "step": 0,
+        "created_at": "2026-01-31 21:49:27"
+    },
+    {
+        "game_id": "697e6ad28bc3d5.98648128",
+        "user_id": "691e45379c1cd3.08514573",
+        "bet": 1,
+        "result": "loss",
+        "profit": -1,
+        "step": 0,
+        "created_at": "2026-01-31 21:49:23"
+    },
+    {
+        "game_id": "697e6ac8c85b44.16958426",
+        "user_id": "691e45379c1cd3.08514573",
+        "bet": 1,
+        "result": "win",
+        "profit": 2.2,
+        "payout": 3.2,
+        "multiplier": 3.2,
+        "step": 3,
+        "created_at": "2026-01-31 21:49:20"
+    }
+]

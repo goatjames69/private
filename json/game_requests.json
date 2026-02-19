@@ -1,0 +1,100 @@
+[
+    {
+        "id": "691e021817fa37.27877940",
+        "user_id": "691e018da9c818.91023716",
+        "game": "Gamevault",
+        "amount": 25,
+        "status": "approved",
+        "date": "2025-11-19 12:44:56"
+    },
+    {
+        "id": "691eb4b4506a89.41737330",
+        "user_id": "691eb43d20ca62.56425488",
+        "game": "Orion",
+        "amount": 100,
+        "status": "approved",
+        "date": "2025-11-20 01:27:00"
+    },
+    {
+        "id": "691f0a1629d0c0.88306556",
+        "user_id": "691f0926bcc384.17432007",
+        "game": "Orion",
+        "amount": 40,
+        "status": "approved",
+        "date": "2025-11-20 07:31:18"
+    },
+    {
+        "id": "6920c6b09907f7.21069473",
+        "user_id": "6920c639a7af80.15224674",
+        "game": "Juwa",
+        "amount": 25,
+        "status": "approved",
+        "date": "2025-11-21 15:08:16"
+    },
+    {
+        "id": "6977969c4f4e58.90868078",
+        "user_id": "69779600372c41.81257807",
+        "game": "Ultrapanda",
+        "amount": 10,
+        "status": "approved",
+        "date": "2026-01-26 11:30:20"
+    },
+    {
+        "id": "6978cae16e8494.79164106",
+        "user_id": "691e45379c1cd3.08514573",
+        "game": "Milkyway",
+        "amount": 10,
+        "status": "approved",
+        "date": "2026-01-27 09:25:37"
+    },
+    {
+        "id": "697b99419df0d0.97829218",
+        "user_id": "697b8b2aae9612.56728974",
+        "game": "Cash Frenzy",
+        "amount": 20,
+        "status": "approved",
+        "date": "2026-01-29 18:30:41",
+        "base_amount": 20,
+        "bonus_amount": 10
+    },
+    {
+        "id": "697ba2f00cdf60.61412485",
+        "user_id": "697b8b2aae9612.56728974",
+        "game": "Cash Frenzy",
+        "amount": 50,
+        "status": "approved",
+        "date": "2026-01-29 19:12:00",
+        "base_amount": 50,
+        "bonus_amount": 25
+    },
+    {
+        "id": "697ba4898c05b8.71464334",
+        "user_id": "697ba3c3867c24.89191547",
+        "game": "Orion",
+        "amount": 100,
+        "status": "approved",
+        "date": "2026-01-29 19:18:49",
+        "base_amount": 100,
+        "bonus_amount": 50
+    },
+    {
+        "id": "697ba4d04b3090.88392870",
+        "user_id": "697ba3c3867c24.89191547",
+        "game": "Orion",
+        "amount": 200,
+        "status": "approved",
+        "date": "2026-01-29 19:20:00",
+        "base_amount": 200,
+        "bonus_amount": 100
+    },
+    {
+        "id": "697ba8ca97b688.29203695",
+        "user_id": "697ba3c3867c24.89191547",
+        "game": "Orion",
+        "amount": 50,
+        "status": "approved",
+        "date": "2026-01-29 19:36:58",
+        "base_amount": 50,
+        "bonus_amount": 25
+    }
+]

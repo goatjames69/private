@@ -1,0 +1,82 @@
+[
+    {
+        "id": "691e01d61a4d05.68662003",
+        "user_id": "691e018da9c818.91023716",
+        "game": "Gamevault",
+        "status": "completed",
+        "date": "2025-11-19 12:43:50",
+        "completed_at": "2025-11-19 12:44:26"
+    },
+    {
+        "id": "691eb48942d321.06137337",
+        "user_id": "691eb43d20ca62.56425488",
+        "game": "Orion",
+        "status": "completed",
+        "date": "2025-11-20 01:26:17",
+        "completed_at": "2025-11-20 01:26:43"
+    },
+    {
+        "id": "691f09e65969a4.26810854",
+        "user_id": "691f0926bcc384.17432007",
+        "game": "Orion",
+        "status": "completed",
+        "date": "2025-11-20 07:30:30",
+        "completed_at": "2025-11-20 07:30:56"
+    },
+    {
+        "id": "6920c686bd7b28.36418531",
+        "user_id": "6920c639a7af80.15224674",
+        "game": "Juwa",
+        "status": "completed",
+        "date": "2025-11-21 15:07:34",
+        "completed_at": "2025-11-21 15:07:57"
+    },
+    {
+        "id": "6934b699897e43.71824349",
+        "user_id": "6934b628764f93.32226117",
+        "game": "Gamevault",
+        "status": "completed",
+        "date": "2025-12-06 18:04:57",
+        "completed_at": "2026-01-26 11:30:52"
+    },
+    {
+        "id": "697796655382f2.42719774",
+        "user_id": "69779600372c41.81257807",
+        "game": "Ultrapanda",
+        "status": "completed",
+        "date": "2026-01-26 11:29:25",
+        "completed_at": "2026-01-26 11:29:53"
+    },
+    {
+        "id": "6977973934e426.25602329",
+        "user_id": "69779600372c41.81257807",
+        "game": "Juwa",
+        "status": "rejected",
+        "date": "2026-01-26 11:32:57",
+        "completed_at": "2026-01-29 16:58:53"
+    },
+    {
+        "id": "6977bf9748d191.80413744",
+        "user_id": "69779600372c41.81257807",
+        "game": "Milkyway",
+        "status": "rejected",
+        "date": "2026-01-26 14:25:11",
+        "completed_at": "2026-01-29 16:58:51"
+    },
+    {
+        "id": "6978ca9ea6ae87.75179248",
+        "user_id": "691e45379c1cd3.08514573",
+        "game": "Milkyway",
+        "status": "completed",
+        "date": "2026-01-27 09:24:30",
+        "completed_at": "2026-01-27 09:25:13"
+    },
+    {
+        "id": "697ba4041090c2.36042960",
+        "user_id": "697ba3c3867c24.89191547",
+        "game": "Orion",
+        "status": "completed",
+        "date": "2026-01-29 19:16:36",
+        "completed_at": "2026-01-29 19:17:08"
+    }
+]

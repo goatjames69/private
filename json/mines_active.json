@@ -1,0 +1,21 @@
+{
+    "697e5e7143aae6.80915923": {
+        "game_id": "697e5e7143aae6.80915923",
+        "user_id": "691e45379c1cd3.08514573",
+        "bet": 16,
+        "mines": 3,
+        "server_seed": "cbb030842462a94e1db2986bcde2fc5920d4adb4f88ffde74eed62f03a8f6a07",
+        "server_seed_hash": "33d3f8f8f634ce8aa5c397d66b25ed2703ecad2844df9e652e1eba48da4229f2",
+        "client_seed": "0f65iiwoni81769889295562",
+        "nonce": 19,
+        "mine_positions": [
+            14,
+            12,
+            11
+        ],
+        "revealed": [],
+        "revealed_count": 0,
+        "status": "playing",
+        "created_at": "2026-01-31 20:56:33"
+    }
+}

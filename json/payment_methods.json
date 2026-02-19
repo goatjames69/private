@@ -1,0 +1,27 @@
+{
+    "paypal": {
+        "enabled": true,
+        "name": "PayPal",
+        "instructions": "Send payment to \"karolshop9@gmail.com\" on the PayPal. Include your transaction ID or payment screenshot.",
+        "qr_code": null
+    },
+    "chime": {
+        "enabled": true,
+        "name": "Chime",
+        "instructions": "Send payment to \"$Alexander-Moux-2\" Chime account. Include your transaction ID or payment screenshot.",
+        "qr_code": "uploads\/qr_codes\/chime_qr_1763571834.PNG"
+    },
+    "paygate": {
+        "enabled": true,
+        "name": "Card, Apple Pay, Google Pay",
+        "instructions": "Instant payment via card, Apple Pay, Google Pay, or PayPal. You will be redirected to PayGate.to to complete payment.",
+        "payout_address": "0x893db65ac38c65a81dfe9a5ded6af2f5a3b7604d",
+        "use_hosted_checkout": true,
+        "checkout_domain": "",
+        "wallet_api_url": "",
+        "api_endpoint": "https:\/\/paygate.to\/api\/crypto\/payment\/create",
+        "success_url": "https:\/\/c634f915d0bb.ngrok-free.app\/deposit.php?paygate=success",
+        "cancel_url": "https:\/\/c634f915d0bb.ngrok-free.app\/deposit.php?paygate=cancel",
+        "webhook_secret": "https:\/\/c634f915d0bb.ngrok-free.app\/api\/paygate_callback.php"
+    }
+}

@@ -1,0 +1,507 @@
+[
+    {
+        "id": "691e018da9c818.91023716",
+        "full_name": "Gggg",
+        "username": "Hjjk",
+        "password_hash": "$2y$10$F4zchzYHMRVMSgiWYMWRru1YyQf7ojacoZQ5A2wGAKRiKoGEN6sVq",
+        "phone": "2258888",
+        "balance": 0,
+        "game_accounts": [
+            {
+                "game": "Gamevault",
+                "username": "jftuyftuy",
+                "password": "hjkbbhkb"
+            }
+        ],
+        "deposit_history": [
+            {
+                "id": "691e01c3a33c02.10975808",
+                "amount": 90,
+                "method": "paypal",
+                "date": "2025-11-19 12:43:36"
+            }
+        ],
+        "game_deposit_requests": [
+            {
+                "id": "691e021817fa37.27877940",
+                "game": "Gamevault",
+                "amount": 25,
+                "date": "2025-11-19 12:45:15"
+            }
+        ],
+        "game_withdrawal_history": [
+            {
+                "id": "691e0249761171.58251084",
+                "game": "Gamevault",
+                "amount": 25,
+                "date": "2025-11-19 12:46:18"
+            }
+        ]
+    },
+    {
+        "id": "691e45379c1cd3.08514573",
+        "full_name": "Sakshyam",
+        "username": "jamss",
+        "password_hash": "$2y$10$l95JlyS.V6bNrLjzX\/WYoeBN\/M7FaQXsBPwBPKRRbUwNg4RnqukBu",
+        "phone": "2454884",
+        "balance": 5145.51,
+        "game_accounts": [
+            {
+                "game": "Milkyway",
+                "username": "jamehsusb s",
+                "password": "Hduhsbsis727\/"
+            },
+            {
+                "game": "Ultrapanda",
+                "username": "goonfid21",
+                "password": "goonfid21"
+            }
+        ],
+        "deposit_history": [
+            {
+                "id": "691e4583297da2.78817501",
+                "amount": 10,
+                "method": "chime",
+                "date": "2025-11-19 17:34:24"
+            },
+            {
+                "id": "697be86fd85ca9.23668486",
+                "amount": 121,
+                "method": "paygate",
+                "date": "2026-01-30 00:08:53"
+            },
+            {
+                "id": "697bddc3caa415.00222828",
+                "amount": 211,
+                "method": "paygate",
+                "date": "2026-01-31 19:46:21"
+            },
+            {
+                "id": "697e5b1c30cec2.45594499",
+                "amount": 12,
+                "method": "paypal",
+                "date": "2026-01-31 20:43:42"
+            },
+            {
+                "id": "697e5cc2216302.13977773",
+                "amount": 12,
+                "method": "paypal",
+                "date": "2026-01-31 21:05:21"
+            }
+        ],
+        "game_deposit_requests": [
+            {
+                "id": "6978cae16e8494.79164106",
+                "game": "Milkyway",
+                "amount": 10,
+                "date": "2026-01-27 09:26:15"
+            }
+        ],
+        "last_spin_date": "2026-02-01",
+        "spin_streak": 4,
+        "total_spins": 37,
+        "email": "jamesxd.store@gmail.com",
+        "card_transactions": [
+            {
+                "transaction_id": "pg_691e45379c1cd3_08514573_1769883819_4ba20135",
+                "email": "jamesxd.store@gmail.com",
+                "amount": 982,
+                "time": "2026-01-31 19:23:39",
+                "status": "pending"
+            },
+            {
+                "transaction_id": "pg_691e45379c1cd3_08514573_1769884361_bc31f673",
+                "email": "jamesxd.store@gmail.com",
+                "amount": 777,
+                "time": "2026-01-31 19:32:41",
+                "status": "pending"
+            },
+            {
+                "transaction_id": "pg_691e45379c1cd3_08514573_1769884642_c03c8c12",
+                "email": "jamesxd.store@gmail.com",
+                "amount": 211,
+                "time": "2026-01-31 19:37:22",
+                "status": "pending"
+            },
+            {
+                "transaction_id": "pg_691e45379c1cd3_08514573_1769884709_edf9e8b0",
+                "email": "jamesxd.store@gmail.com",
+                "amount": 121,
+                "time": "2026-01-31 19:38:29",
+                "status": "pending"
+            },
+            {
+                "transaction_id": "pg_691e45379c1cd3_08514573_1769884829_42edf8f0",
+                "email": "jamesxd.store@gmail.com",
+                "amount": 121,
+                "time": "2026-01-31 19:40:29",
+                "status": "pending"
+            },
+            {
+                "transaction_id": "pg_691e45379c1cd3_08514573_1769885043_96a4c904",
+                "email": "jamesxd.store@gmail.com",
+                "amount": 12,
+                "time": "2026-01-31 19:44:03",
+                "status": "pending"
+            },
+            {
+                "transaction_id": "pg_691e45379c1cd3_08514573_1769885202_634d6ad4",
+                "email": "jamesxd.store@gmail.com",
+                "amount": 121,
+                "time": "2026-01-31 19:46:42",
+                "status": "pending"
+            },
+            {
+                "transaction_id": "pg_691e45379c1cd3_08514573_1769885271_1e1e898e",
+                "email": "jamesxd.store@gmail.com",
+                "amount": 212,
+                "time": "2026-01-31 19:47:51",
+                "status": "pending"
+            },
+            {
+                "transaction_id": "pg_691e45379c1cd3_08514573_1769885369_e2e7420d",
+                "email": "jamesxd.store@gmail.com",
+                "amount": 2121,
+                "time": "2026-01-31 19:49:29",
+                "status": "pending"
+            },
+            {
+                "transaction_id": "pg_691e45379c1cd3_08514573_1769897213_64d8e3a9",
+                "email": "jamesxd.store@gmail.com",
+                "amount": 100,
+                "time": "2026-01-31 23:06:53",
+                "status": "pending"
+            },
+            {
+                "transaction_id": "pg_691e45379c1cd3_08514573_1769944063_0b48e326",
+                "email": "jamesxd.store@gmail.com",
+                "amount": 121,
+                "time": "2026-02-01 12:07:43",
+                "status": "pending"
+            },
+            {
+                "transaction_id": "pg_691e45379c1cd3_08514573_1769944422_8e8dd08b",
+                "email": "jamesxd.store@gmail.com",
+                "amount": 99,
+                "time": "2026-02-01 12:13:42",
+                "status": "pending"
+            },
+            {
+                "transaction_id": "pg_691e45379c1cd3_08514573_1769945460_ec322382",
+                "email": "jamesxd.store@gmail.com",
+                "amount": 100,
+                "time": "2026-02-01 12:31:00",
+                "status": "pending"
+            }
+        ],
+        "referral_code": "YQJ6M2R4",
+        "profile_photo": "uploads\/profile_photos\/691e45379c1cd3.08514573.png"
+    },
+    {
+        "id": "691eb43d20ca62.56425488",
+        "full_name": "Ishan bhandari",
+        "username": "Ishan",
+        "password_hash": "$2y$10$CiMERvW6YHSOQXHOr0KQguZriX1cgSU15YFqq3pvjrVOEfRSsjEY.",
+        "phone": "98704210604",
+        "balance": 0,
+        "game_accounts": [
+            {
+                "game": "Orion",
+                "username": "Oriongsgs",
+                "password": "Gshyshs"
+            }
+        ],
+        "deposit_history": [
+            {
+                "id": "691eb46bd607b1.76538880",
+                "amount": 200,
+                "method": "chime",
+                "date": "2025-11-20 01:26:07"
+            }
+        ],
+        "game_deposit_requests": [
+            {
+                "id": "691eb4b4506a89.41737330",
+                "game": "Orion",
+                "amount": 100,
+                "date": "2025-11-20 01:28:12"
+            }
+        ],
+        "game_withdrawal_history": [
+            {
+                "id": "691eb510b41667.39588097",
+                "game": "Orion",
+                "amount": 700,
+                "date": "2025-11-20 01:28:58"
+            }
+        ]
+    },
+    {
+        "id": "691f0926bcc384.17432007",
+        "full_name": "Anurag Subedi",
+        "username": "anurag385",
+        "password_hash": "$2y$10$thgiyduyB5Vsnbu\/iUUyJOxCevrdbCTsbOpy4BPWStUsmtNhPP.je",
+        "phone": "9849949631",
+        "balance": 10,
+        "game_accounts": [
+            {
+                "game": "Orion",
+                "username": "Ycutxxt",
+                "password": "Txtzzt"
+            }
+        ],
+        "deposit_history": [
+            {
+                "id": "691f096a6e9fc0.63836545",
+                "amount": 50,
+                "method": "chime",
+                "date": "2025-11-20 07:29:38"
+            }
+        ],
+        "game_deposit_requests": [
+            {
+                "id": "691f0a1629d0c0.88306556",
+                "game": "Orion",
+                "amount": 40,
+                "date": "2026-01-29 16:56:24"
+            }
+        ]
+    },
+    {
+        "id": "6920c639a7af80.15224674",
+        "full_name": "Mehtab",
+        "username": "mehtab",
+        "password_hash": "$2y$10$5s1xtNyCBANESy5yh6L0.OQL0P2E9WpVcPOPpfxCaC1WuHaJBX\/8y",
+        "phone": "128u12818721",
+        "balance": 0,
+        "game_accounts": [
+            {
+                "game": "Juwa",
+                "username": "mehtav_jw",
+                "password": "mehtav_jw"
+            }
+        ],
+        "deposit_history": [
+            {
+                "id": "6920c6615aa650.11859193",
+                "amount": 25,
+                "method": "chime",
+                "date": "2025-11-21 15:07:10"
+            }
+        ],
+        "game_deposit_requests": [
+            {
+                "id": "6920c6b09907f7.21069473",
+                "game": "Juwa",
+                "amount": 25,
+                "date": "2025-11-21 15:08:36"
+            }
+        ],
+        "game_withdrawal_history": [
+            {
+                "id": "6920c6cfef84b7.78765800",
+                "game": "Juwa",
+                "amount": 400,
+                "date": "2025-11-21 15:09:03"
+            }
+        ]
+    },
+    {
+        "id": "6934b628764f93.32226117",
+        "full_name": "Alex Doe",
+        "username": "alexdoee",
+        "password_hash": "$2y$10$WztBiwL4wuIK2bJK4lYoPeYirnxY1uqiXacXEZW\/feuKb0fV77hHa",
+        "phone": "$$paisA0",
+        "balance": 0,
+        "game_accounts": [],
+        "deposit_history": [],
+        "game_deposit_requests": []
+    },
+    {
+        "id": "69779600372c41.81257807",
+        "full_name": "Kurey",
+        "username": "Kurey001",
+        "password_hash": "$2y$10$0pM8Q33yvt96XhoxR6xDquvuWeb54y2yb\/JyAyuF8vY.iJRprXiiG",
+        "phone": "4695632580",
+        "balance": 10,
+        "game_accounts": [
+            {
+                "game": "Ultrapanda",
+                "username": "Kureyjb1",
+                "password": "Kurey001@121212"
+            }
+        ],
+        "deposit_history": [
+            {
+                "id": "6977964609a1a7.30216299",
+                "amount": 10,
+                "method": "chime",
+                "date": "2026-01-26 11:28:59"
+            },
+            {
+                "id": "6977964e960bd1.02084793",
+                "amount": 10,
+                "method": "chime",
+                "date": "2026-01-26 11:30:43"
+            }
+        ],
+        "game_deposit_requests": [
+            {
+                "id": "6977969c4f4e58.90868078",
+                "game": "Ultrapanda",
+                "amount": 10,
+                "date": "2026-01-26 11:30:57"
+            }
+        ]
+    },
+    {
+        "id": "697b8b2aae9612.56728974",
+        "full_name": "Amsal noob",
+        "username": "amsal",
+        "password_hash": "$2y$10$S3YF\/sH86yz0M70vDptiaOVIOGXn35WVvtfOkERJ6K841o57yErKS",
+        "phone": "+1(210)578-36734",
+        "balance": 0,
+        "game_accounts": [
+            {
+                "game": "Cash Frenzy",
+                "username": "admin",
+                "password": "win1243"
+            }
+        ],
+        "deposit_history": [],
+        "game_deposit_requests": [],
+        "last_spin_date": "2026-01-29",
+        "spin_streak": 1,
+        "total_spins": 61,
+        "game_deposit_log": [
+            {
+                "request_id": "697b99419df0d0.97829218",
+                "game": "Cash Frenzy",
+                "base_amount": 20,
+                "bonus_amount": 10,
+                "total_credited": 30,
+                "date": "2026-01-29 18:31:00"
+            },
+            {
+                "request_id": "697ba2f00cdf60.61412485",
+                "game": "Cash Frenzy",
+                "base_amount": 50,
+                "bonus_amount": 25,
+                "total_credited": 75,
+                "date": "2026-01-29 19:12:17"
+            }
+        ],
+        "game_withdrawal_history": [
+            {
+                "id": "697b9c0c7a58a7.73475004",
+                "game": "Cash Frenzy",
+                "amount": 400,
+                "date": "2026-01-29 18:42:42"
+            }
+        ]
+    },
+    {
+        "id": "697ba3c3867c24.89191547",
+        "full_name": "Daku",
+        "username": "DakuMeraAurat69",
+        "password_hash": "$2y$10$PjkOFHpvpBcUH67g5ZXtWuo5Hs1ODE3u\/O8AlzMoXVd6WuWbzF1SG",
+        "phone": "9099698969",
+        "balance": 0,
+        "game_accounts": [
+            {
+                "game": "Orion",
+                "username": "dakuL",
+                "password": "dakuL@33"
+            }
+        ],
+        "deposit_history": [
+            {
+                "id": "697ba464e40a72.78734474",
+                "amount": 1000,
+                "method": "paypal",
+                "date": "2026-01-29 19:18:20"
+            },
+            {
+                "id": "697ba8adb454e1.49387220",
+                "amount": 100,
+                "method": "paypal",
+                "date": "2026-01-29 19:36:35"
+            }
+        ],
+        "game_deposit_requests": [],
+        "last_spin_date": "2026-01-29",
+        "spin_streak": 1,
+        "total_spins": 1,
+        "game_deposit_log": [
+            {
+                "request_id": "697ba4898c05b8.71464334",
+                "game": "Orion",
+                "base_amount": 100,
+                "bonus_amount": 50,
+                "total_credited": 150,
+                "date": "2026-01-29 19:18:57"
+            },
+            {
+                "request_id": "697ba4d04b3090.88392870",
+                "game": "Orion",
+                "base_amount": 200,
+                "bonus_amount": 100,
+                "total_credited": 300,
+                "date": "2026-01-29 19:20:06"
+            },
+            {
+                "request_id": "697ba8ca97b688.29203695",
+                "game": "Orion",
+                "base_amount": 50,
+                "bonus_amount": 25,
+                "total_credited": 75,
+                "date": "2026-01-29 19:37:12"
+            }
+        ],
+        "game_withdrawal_history": [
+            {
+                "id": "697ba4b3659d04.23496322",
+                "game": "Orion",
+                "amount": 600,
+                "date": "2026-01-29 19:19:35"
+            },
+            {
+                "id": "697ba8fc046036.86279105",
+                "game": "Orion",
+                "amount": 60,
+                "date": "2026-01-31 19:46:25"
+            }
+        ]
+    },
+    {
+        "id": "697f3fd795c142.89784799",
+        "full_name": "HARSHAL Singnapurkar",
+        "username": "harsh",
+        "email": "gamesofusa.com@gmail.com",
+        "password_hash": "$2y$10$lkEBN9NFitdS0vD3U1Ufmuq0VeEihGA3a1IdPApptpEF898.IDlFm",
+        "phone": "5143127943",
+        "balance": 20000.75,
+        "game_accounts": [],
+        "deposit_history": [
+            {
+                "id": "697f3fff17c764.91432853",
+                "amount": 10000,
+                "method": "paypal",
+                "date": "2026-02-01 12:59:05"
+            },
+            {
+                "id": "697f404e7ea882.52320782",
+                "amount": 10000,
+                "method": "chime",
+                "date": "2026-02-01 13:00:19"
+            }
+        ],
+        "game_deposit_requests": [],
+        "referral_code": "644WUWAB",
+        "referred_by": "691e45379c1cd3.08514573",
+        "referral_bonus_paid": true,
+        "last_spin_date": "2026-02-01",
+        "spin_streak": 1,
+        "total_spins": 1
+    }
+]

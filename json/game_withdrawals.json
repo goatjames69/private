@@ -1,0 +1,74 @@
+[
+    {
+        "id": "691e0249761171.58251084",
+        "user_id": "691e018da9c818.91023716",
+        "game": "Gamevault",
+        "amount": 25,
+        "status": "approved",
+        "date": "2025-11-19 12:45:45"
+    },
+    {
+        "id": "691eb510b41667.39588097",
+        "user_id": "691eb43d20ca62.56425488",
+        "game": "Orion",
+        "amount": 700,
+        "status": "approved",
+        "date": "2025-11-20 01:28:32"
+    },
+    {
+        "id": "6920c6cfef84b7.78765800",
+        "user_id": "6920c639a7af80.15224674",
+        "game": "Juwa",
+        "amount": 400,
+        "status": "approved",
+        "date": "2025-11-21 15:08:47"
+    },
+    {
+        "id": "6978cb14e448f3.46072443",
+        "user_id": "691e45379c1cd3.08514573",
+        "game": "Milkyway",
+        "amount": 10,
+        "status": "rejected",
+        "date": "2026-01-27 09:26:28"
+    },
+    {
+        "id": "697b996e20fda6.57644763",
+        "user_id": "697b8b2aae9612.56728974",
+        "game": "Cash Frenzy",
+        "amount": 60,
+        "status": "rejected",
+        "date": "2026-01-29 18:31:26"
+    },
+    {
+        "id": "697b9a3a37b0b4.13998677",
+        "user_id": "697b8b2aae9612.56728974",
+        "game": "Cash Frenzy",
+        "amount": 100,
+        "status": "rejected",
+        "date": "2026-01-29 18:34:50"
+    },
+    {
+        "id": "697b9c0c7a58a7.73475004",
+        "user_id": "697b8b2aae9612.56728974",
+        "game": "Cash Frenzy",
+        "amount": 400,
+        "status": "approved",
+        "date": "2026-01-29 18:42:36"
+    },
+    {
+        "id": "697ba4b3659d04.23496322",
+        "user_id": "697ba3c3867c24.89191547",
+        "game": "Orion",
+        "amount": 600,
+        "status": "approved",
+        "date": "2026-01-29 19:19:31"
+    },
+    {
+        "id": "697ba8fc046036.86279105",
+        "user_id": "697ba3c3867c24.89191547",
+        "game": "Orion",
+        "amount": 60,
+        "status": "approved",
+        "date": "2026-01-29 19:37:48"
+    }
+]

@@ -1,0 +1,281 @@
+/* Real-time: toasts, notification center, confirm dialog, skeletons, transitions */
+
+/* Custom confirm dialog (yes/no) - no browser confirm() */
+.james-confirm-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+.james-confirm-overlay.james-confirm-visible {
+    opacity: 1;
+    visibility: visible;
+}
+.james-confirm-modal {
+    width: 100%;
+    max-width: 400px;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
+    background: var(--bg-card, #1e2430);
+    border: 1px solid var(--border-color, rgba(255,255,255,0.1));
+    transform: scale(0.95);
+    transition: transform 0.2s ease;
+}
+.james-confirm-overlay.james-confirm-visible .james-confirm-modal {
+    transform: scale(1);
+}
+.james-confirm-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-primary, #e2e8f0);
+}
+.james-confirm-message {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-secondary, #94a3b8);
+    margin-bottom: 24px;
+}
+.james-confirm-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+.james-confirm-btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s, transform 0.15s;
+}
+.james-confirm-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--accent-primary, #3b82f6);
+}
+.james-confirm-cancel {
+    background: var(--bg-card-alt, #2d3142);
+    color: var(--text-secondary, #94a3b8);
+    border: 1px solid var(--border-color);
+}
+.james-confirm-cancel:hover {
+    background: rgba(255,255,255,0.08);
+    color: var(--text-primary);
+}
+.james-confirm-yes {
+    background: linear-gradient(135deg, #166534 0%, #15803d 100%);
+    color: #fff;
+}
+.james-confirm-yes:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+.james-confirm-modal.james-confirm-danger .james-confirm-yes {
+    background: linear-gradient(135deg, #991b1b 0%, #b91c1c 100%);
+}
+.james-confirm-modal.james-confirm-danger .james-confirm-yes:hover {
+    filter: brightness(1.1);
+}
+
+.james-toast-container {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 360px;
+    pointer-events: none;
+}
+.james-toast {
+    pointer-events: auto;
+    padding: 14px 18px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+    border: 1px solid rgba(255,255,255,0.08);
+    opacity: 0;
+    transform: translateX(24px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.james-toast.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+.james-toast-title { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+.james-toast-message { font-size: 0.875rem; opacity: 0.95; }
+.james-toast-success { background: linear-gradient(135deg, #14532d 0%, #166534 100%); color: #fff; }
+.james-toast-error { background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%); color: #fff; }
+.james-toast-warning { background: linear-gradient(135deg, #78350f 0%, #92400e 100%); color: #fff; }
+.james-toast-info { background: linear-gradient(135deg, #1e3a5f 0%, #1e40af 100%); color: #fff; }
+
+/* Notification center trigger (add to header) */
+.james-notification-trigger {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg-card, #2d3142);
+    border: 1px solid var(--border-color, rgba(255,255,255,0.1));
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+.james-notification-trigger:hover { background: var(--bg-card-alt, #35394a); transform: scale(1.05); }
+.james-notification-trigger .james-nc-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: center;
+    background: var(--danger, #f87171);
+    color: #fff;
+    border-radius: 9px;
+    display: none;
+}
+.james-notification-trigger .james-nc-badge.show { display: block; }
+
+/* Notification center panel */
+.james-notification-center {
+    position: fixed;
+    top: 56px;
+    right: 16px;
+    width: 360px;
+    max-width: calc(100vw - 32px);
+    max-height: 420px;
+    background: var(--bg-card, #2d3142);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 16px 48px rgba(0,0,0,0.4);
+    z-index: 99998;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+.james-notification-center.open { display: flex; }
+.james-nc-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border-color);
+    font-weight: 600;
+}
+.james-nc-mark-read {
+    background: none;
+    border: none;
+    color: var(--accent-primary);
+    cursor: pointer;
+    font-size: 13px;
+}
+.james-nc-mark-read:hover { color: var(--accent-hover); }
+.james-nc-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px;
+}
+.james-nc-empty {
+    padding: 24px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+.james-nc-item {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.james-nc-item:hover { background: rgba(255,255,255,0.05); }
+.james-nc-item.unread { background: rgba(74, 222, 128, 0.08); }
+.james-nc-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+.james-nc-icon.success { background: rgba(74, 222, 128, 0.25); }
+.james-nc-icon.error { background: rgba(248, 113, 113, 0.25); }
+.james-nc-icon.warning { background: rgba(251, 191, 36, 0.25); }
+.james-nc-icon.info { background: rgba(96, 165, 250, 0.25); }
+.james-nc-content { flex: 1; min-width: 0; }
+.james-nc-title { font-weight: 600; font-size: 13px; margin-bottom: 2px; }
+.james-nc-body { font-size: 12px; color: var(--text-secondary); }
+.james-nc-time { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
+
+/* Loading skeletons */
+.james-skeleton {
+    background: linear-gradient(90deg, var(--bg-card-alt) 25%, rgba(255,255,255,0.06) 50%, var(--bg-card-alt) 75%);
+    background-size: 200% 100%;
+    animation: james-skeleton 1.2s ease-in-out infinite;
+    border-radius: 8px;
+}
+@keyframes james-skeleton {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+.james-skeleton-text { height: 1em; }
+.james-skeleton-title { height: 1.4em; width: 60%; margin-bottom: 8px; }
+.james-skeleton-card { height: 80px; }
+.james-skeleton-row { height: 40px; margin-bottom: 8px; }
+
+/* Button loading state - disable and show spinner */
+.btn[data-loading="true"],
+button[data-loading="true"] {
+    pointer-events: none;
+    opacity: 0.8;
+    position: relative;
+}
+.btn[data-loading="true"] .btn-text,
+button[data-loading="true"] .btn-text {
+    visibility: hidden;
+}
+.btn[data-loading="true"]::after,
+button[data-loading="true"]::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    margin: -9px 0 0 -9px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: james-spin 0.7s linear infinite;
+}
+@keyframes james-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Smooth content transition (avoid flicker) */
+.james-content-enter {
+    opacity: 0;
+    transform: translateY(4px);
+}
+.james-content-enter.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}

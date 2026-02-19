@@ -1,0 +1,5 @@
+{
+    "min_game_withdrawal": 60,
+    "game_rollover_multiplier": 4,
+    "game_deposit_bonus_percent": 50
+}

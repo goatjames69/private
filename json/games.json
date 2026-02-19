@@ -1,0 +1,102 @@
+[
+    {
+        "id": "mines",
+        "name": "Mines",
+        "slug": "mines",
+        "logo": "mines_1769892973.png",
+        "link": "",
+        "our_game": true
+    },
+    {
+        "id": "pickpath",
+        "name": "Pick-a-Path",
+        "slug": "pickapath",
+        "logo": "pickapath_1769893111.png",
+        "link": "",
+        "our_game": true
+    },
+    {
+        "id": "orion",
+        "name": "Orion",
+        "slug": "orion",
+        "logo": "orionstars.jpg",
+        "link": "http:\/\/start.orionstars.vip:8580\/index.html"
+    },
+    {
+        "id": "milkyway",
+        "name": "Milkyway",
+        "slug": "milkyway",
+        "logo": "milkyway.jpg",
+        "link": "https:\/\/milkywayapp.xyz\/"
+    },
+    {
+        "id": "firekirin",
+        "name": "Firekirin",
+        "slug": "firekirin",
+        "logo": "firekirin.jpg",
+        "link": "http:\/\/start.firekirin.xyz:8580\/"
+    },
+    {
+        "id": "gamevault",
+        "name": "Gamevault",
+        "slug": "gamevault",
+        "logo": "gamevault.jpg",
+        "link": "https:\/\/download.gamevault999.com\/"
+    },
+    {
+        "id": "juwa",
+        "name": "Juwa",
+        "slug": "juwa",
+        "logo": "juwa.jpg",
+        "link": "https:\/\/dl.juwa777.com\/"
+    },
+    {
+        "id": "vegassweeps",
+        "name": "Vegassweeps",
+        "slug": "vegassweeps",
+        "logo": "vegassweeps.jpg",
+        "link": "https:\/\/m.lasvegassweeps.com\/"
+    },
+    {
+        "id": "ultrapanda",
+        "name": "Ultrapanda",
+        "slug": "ultrapanda",
+        "logo": "ultrapanda.jpg",
+        "link": "https:\/\/www.ultrapanda.mobi\/"
+    },
+    {
+        "id": "vblink",
+        "name": "Vblink",
+        "slug": "vblink",
+        "logo": "vblink.jpg",
+        "link": "https:\/\/www.vblink777.club\/"
+    },
+    {
+        "id": "pandamaster",
+        "name": "Pandamaster",
+        "slug": "pandamaster",
+        "logo": "pandamaster.jpg",
+        "link": "https:\/\/pandamaster.vip:8888\/index.html"
+    },
+    {
+        "id": "cashmachine",
+        "name": "Cash Machine",
+        "slug": "cashmachine",
+        "logo": "cashmachine.png",
+        "link": "https:\/\/www.cashmachine777.com\/"
+    },
+    {
+        "id": "gameroom",
+        "name": "Gameroom",
+        "slug": "gameroom",
+        "logo": "gameroom.png",
+        "link": "https:\/\/www.gameroom777.com\/"
+    },
+    {
+        "id": "g697b96c7b88eb5.41226330",
+        "name": "Cash Frenzy",
+        "slug": "cashfrenzy",
+        "logo": "cashfrenzy_1769707207.PNG",
+        "link": "https:\/\/www.cashfrenzy777.com\/"
+    }
+]

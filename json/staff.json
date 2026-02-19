@@ -1,0 +1,16 @@
+[
+    {
+        "id": "697b85be21cf90.30294192",
+        "username": "amsal",
+        "password_hash": "$2y$10$iFo7z.ACVOu4TWyfzuRqneDY5YAiHwxSDr1qWa4k6\/oEDijCAkXi2",
+        "full_name": "Amsal noob",
+        "permissions": {
+            "payments": true,
+            "withdrawals": true,
+            "game_accounts": true,
+            "payment_methods": false,
+            "edit_game_credentials": true
+        },
+        "created_at": "2026-01-29 17:07:26"
+    }
+]
